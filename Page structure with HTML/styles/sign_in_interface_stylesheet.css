@@ -6,6 +6,7 @@
 
 html{
     font-size: 18px;
+    background-color: #000000da;
 }
 
 body{
@@ -13,21 +14,26 @@ body{
     font-family: sans-serif;
 }
 
+.picture{
+    max-width: 100%;
+}
+
 .form{
     width: 25rem;
     margin: 0 auto;
     color: #f2cc8f;
-    background: #3d405b;
+    background: #0f0f0f;
     border-radius: 8px;
     padding: 1rem 2rem;
 }
 
 .form__group{
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
 }
 
 .form__label{
+    color: #fc0100;
     margin-bottom: 0.25rem;
     font-weight: 600;
 }
@@ -44,7 +50,8 @@ body{
     font-size: 1.1rem;
     padding: 0.5rem 2rem;
     margin: 1.5rem auto 0.5rem auto;
-    background: #e07a5f;
+    background: #fc0100;
+    ;
     color: #f4f1de;
     border: none;
     border-radius: 4px;
@@ -53,5 +60,5 @@ body{
 }
 
 .button:hover{
-    background: #fc8164;
+    background: #00a000;
 }
