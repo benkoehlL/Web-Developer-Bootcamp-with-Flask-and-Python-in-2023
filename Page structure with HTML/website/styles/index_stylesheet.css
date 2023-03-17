@@ -1,0 +1,54 @@
+h1{
+    color: red;
+    margin-bottom: 24px;
+    font-size: 24px;
+}
+
+h3{
+    color: black;
+}
+
+blockquote{
+    color: green;
+    margin: 0 0 36px 0;
+    padding-left: 30px;
+    border-left: 6px solid green;
+    font-style: italic;
+}
+
+em{
+    color: black;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.text{
+    color:blueviolet
+}
+
+.green{
+    color:green
+}
+
+p,
+.blue{
+    color: blue;
+}
+
+.black{
+    color: black
+}
+
+#profile_pic{
+    width: 15%;
+    height:15%;
+    object-fit: contain;
+    margin: 10px;
+}
+
+#logo_pic{
+    width: 20%;
+    height:20%;
+    object-fit: contain;
+    margin: 20px;
+}
