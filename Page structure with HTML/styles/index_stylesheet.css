@@ -3,8 +3,9 @@
 *::after{
     box-sizing: inherit;
 }
+
 main{
-    max-width: 35rem;
+    max-width: 50rem;
     margin: 3.75rem auto 0 auto;
 }
 body{
@@ -91,4 +92,16 @@ p,
     height:20%;*/
     object-fit: contain;
     margin: 20px;
+}
+
+.black{
+    color: black;
+}
+
+.column{
+    text-align: center;
+}
+video{
+    width: 500px;
+    height: 500px;
 }
