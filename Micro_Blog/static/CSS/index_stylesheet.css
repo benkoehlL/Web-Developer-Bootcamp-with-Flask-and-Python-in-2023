@@ -1,0 +1,107 @@
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+main{
+    max-width: 50rem;
+    margin: 3.75rem auto 0 auto;
+}
+body{
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Ubuntu, sans-serif;
+    color: #002244;
+}
+
+ul{
+    list-style: none;
+    line-height: 150%;
+}
+
+li{
+    color: inherit;
+}
+
+li::before {
+    content: "•"; 
+    color: black;
+    display: inline-block; 
+    width: 0.75rem;
+}
+
+p{
+    line-height: 150%;
+}
+
+h1{
+    margin-bottom: 2.5rem;
+    color: red;
+    margin-bottom: 24px;
+    font-size: 24px;
+}
+
+h3{
+    color: black;
+}
+
+blockquote{
+    color: green;
+    margin: 0 0 36px 0;
+    padding-left: 30px;
+    border-left: 6px solid green;
+    font-style: italic;
+}
+
+em{
+    color: black;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.text{
+    color:blueviolet
+}
+
+.green{
+    color:green
+}
+
+p,
+.blue{
+    color: blue;
+}
+
+.black{
+    color: black
+}
+
+#profile_pic{
+    max-width: 25%;
+    border: 5rem;
+    /*width: 15%;
+    height:15%;*/
+    object-fit: contain;
+    margin: 10px;
+}
+
+#logo_pic{
+    max-width: 25%;
+    border: 5rem;
+    /*width: 20%;
+    height:20%;*/
+    object-fit: contain;
+    margin: 20px;
+}
+
+.black{
+    color: black;
+}
+
+.column{
+    text-align: center;
+}
+video{
+    width: 500px;
+    height: 500px;
+}

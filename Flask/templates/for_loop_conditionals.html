@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User OS</title>
+</head>
+<body>
+    <h2>Users that use Linux</h2>
+    <p>
+        <ul>
+        {% for user in user_os.keys() %}
+            {% for os in user_os[user] %}
+                {% if os == "Linux" %}
+                    <li>{{user}}</li>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+        </ul>
+    </p>
+
+    <h2>Users that use Microsoft</h2>
+    <p>
+        <ul>
+        {% for user in user_os.keys() %}
+            {% for os in user_os[user] %}
+                {% if os == "Microsoft" %}
+                    <li>{{user}}</li>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+        </ul>
+    </p>
+
+    <h2>Other pages</h2>
+    <p><a href="../jinja_template">This</a> is a Jinja2 page</p>
+    <p><a href="../expressions">This</a> is a page demonstrating how to insert expressions into a page</p>
+    <p><a href="../data_structures">This</a> is a page demonstrating how to use data structures on page</p>
+    <p><a href="../conditionals">This</a> is a page demonstrating how to use conditionals on page</p>
+    <p><a href="../for_loop">This</a> is a page demonstrating how to use for loops on page</p>
+    <p><a href="../first_template">This</a> is the first page</p>
+    <p><a href="../second_template">This</a> is the second page</p>
+
+</body>
+</html>

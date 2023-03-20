@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jinja2 Expressions</title>
+</head>
+<body>
+    <h2>Expressions in Jinja2</h2>
+    
+    <h3>Interpolation</h3>
+
+    <p>
+        A quick {{color}} {{animal_one}} jumps over the lazy {{animal_two}}.
+    </p>
+
+    <h3>Addition and Subtraction</h3>
+
+    <p>
+        Alice bought {{orange_amount}} oranges and {{apple_amount}} apples.
+    </p>
+
+    <p>
+        In total she has {{orange_amount + apple_amount}} fruits.
+    </p>
+
+    <p>
+        She gave {{donate_amount}} fruits to me.
+    </p>
+
+    <p>
+        Now, I have {{donate_amount}} fruits and she only has {{orange_amount + apple_amount - donate_amount}}
+    </p>
+
+    <h3>String concatenation</h3>
+
+    <p>A lot of people think that {{animal_one +'-' + animal_two}} is the most powerful animal that I bred.</p>
+
+    <h2>Other pages</h2>
+    <p><a href="../jinja_template">This</a> is a Jinja2 page</p>
+    <p><a href="../data_structures">This</a> is a page demonstrating how to use data structures on page</p>
+    <p><a href="../conditionals">This</a> is a page demonstrating how to use conditionals on page</p>
+    <p><a href="../for_loop">This</a> is a page demonstrating how to use for loops on page</p>
+    <p><a href="../for_loop_conditionals">This</a> is a page demonstrating how to use conditionals in for loops on a page</p>
+    <p><a href="../first_template">This</a> is the first page</p>
+    <p><a href="../second_template">This</a> is the second page</p>
+</body>
+</html>

@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User story tool</title>
-    <link rel="stylesheet" href="style/style_sheet.css"\>
+    <link rel="stylesheet" href="../static/CSS/style_sheet.css"\>
 </head>
 <body>
     <header class="navbar">
         <div class="navbar__brand">
-            <img class="logo" src="image/SaxonQ_logo.png" alt="The SaxonQ logo"/> Our user story diary
+            <img class="logo" src="../static/image/SaxonQ_logo.png" alt="The SaxonQ logo"/> Our user story diary
         </div>
         <ul class="navbar__navigation">
             <li class="navbar__navigation-item"><a href="#" class="navbar__link">Recent</a></li>
@@ -21,7 +21,7 @@
     <main class="main">
         <section>
             <h1>Add new entry</h1>
-            <form class="form" action="/entry" method="post">
+            <form class="form" method="POST">
                 <p class="input">
                     <label for="entry" class="form__label">Entry contents:</label>
                     <textarea name="content" id="entry" class="form__textarea" aria-label="Entry content"></textarea>
@@ -39,23 +39,32 @@
                     I think quantum computers are strange. They have no way for saving so they always work until they have solved something.
                     No wonder they make so many mistakes if they do not give themselves rest :)
                 </p>
+                {% for entry in entries %}
+                    <div>
+                        <h2 class="entry__title">{{entry[0] | truncate(30, true)}}</h2>
+                        <time datetime="{{entry[1]}}">&#8226; {{entry[2]}}</time>
+                    </div>
+                    <p class="entry__content">
+                        {{entry[0]}}
+                    </p>
+                {% endfor %}
             </article>
     </main>
 
     <footer class="footer">
         <div class="footer__content">
             <section class="left">
-                <a class="footer__item" href="../Page structure with HTML/index.html">Made by Benjamin Köhler</a>
-                <a class="footer__item" href="../Page structure with HTML/sign_in_interface.html">Check out my other projects</a>
+                <a class="footer__item" href="../Author">Made by Benjamin Köhler</a>
+                <a class="footer__item" href="../Sign_In">Check out my other projects</a>
             </section>
             <section class="right">
                 <div class="footer__column">
-                    <a class="footer__item" href="../Page structure with HTML/simple_site.html">Recent</a>
-                    <a class="footer__item" href="../Page structure with HTML/index.html">Calendar</a>
+                    <a class="footer__item" href="../Author">Recent</a>
+                    <a class="footer__item" href="../Author">Calendar</a>
                 </div>
                 <div class="footer__column">
-                    <a class="footer__item" href="../Page structure with HTML/simple_site.html">About</a>
-                    <a class="footer__item" href="../Page structure with HTML/index.html">How this is made</a>
+                    <a class="footer__item" href="../Sign_In">About</a>
+                    <a class="footer__item" href="../Author">How this is made</a>
                 </div>
             </section>
 
