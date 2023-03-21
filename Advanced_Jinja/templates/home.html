@@ -1,0 +1,47 @@
+{% import 'macros.jinja2' as macros %}
+{% extends 'base.html' %}
+
+{% block head %}
+<style>
+
+</style>
+{% endblock %}
+
+{%block content %}
+    {% set num_todos = todos | length %}
+    <h1>Todays</h1>
+    <h2>First approach</h2>
+    {% if num_todos > 0 %}
+    <p>You have the following {{num_todos}} tasks left for today:</p>
+    {% else %}
+    <p>You have nothing to do today.</p>
+    {% endif %}
+    <p>Tasks you still need to do:</p>
+    <ul>
+    {% for task in todos %}
+        {% if not(task[1]) %}    
+        <li>
+            {{task[0]}}
+        </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+    <p>Tasks you already completed:</p>
+    <ul>
+    {% for task in todos %}
+        {% if task[1] %}    
+        <li>
+            {{task[0]}}
+        </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+    <h2>Second approach</h2>
+    {{macros.todoui(todos)}}
+
+    <h2>More pages</h2>
+    <ul>
+        <li><a href="{{url_for('signup')}}">Sign-up</a></li>
+        <li><a href="{{url_for('login')}}">Log-in</a></li>
+    </ul>
+{% endblock %}

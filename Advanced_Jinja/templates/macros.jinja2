@@ -1,0 +1,17 @@
+{% macro todoli(text, completed=False)%}
+        <li>{{ "[x]" if completed else "[ ]"}} - <a href="{{url_for('todo')}}{{text}}">{{text}}</a></li>
+{% endmacro %}
+
+{% macro todoui(todos)%}
+    {% set num_todos = todos | length %}
+    {% if num_todos > 0 %}
+    <p>You have the following tasks:</p>
+    <ul>
+        {% for text, completed in todos %}
+        {{todoli(text, completed)}}
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>You have nothing to do today.</p>
+    {% endif %}
+{% endmacro %}

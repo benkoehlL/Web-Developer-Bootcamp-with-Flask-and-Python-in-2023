@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fizzbuzz</title>
+    <style>
+        div{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fizzbuzz{
+            color: blue;
+        }
+
+        .fizz{
+            color: green;
+        }
+        .buzz{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <ol>
+    {% for i in range(1,101) %}
+        {% if i%3==0 and i%5==0%}
+            <li class="fizzbuzz"> fizzbuzz</p>
+        {% elif i%3==0 %}
+            <li class="fizz"> fizz</p>
+        {% elif i%5==0 %}
+            <li class="buzz"> buzz</p>
+        {% else %}
+            <li> {{i}}</p>
+        {% endif %}
+    {% endfor %}
+    </ol>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    {% if completed %}
+        <style>
+            p{
+                text-align: center;
+                margin: 8px 16px;
+                background-color: green;
+                padding: 12px 24px;
+                border: 1px solid black;
+                border-radius: 4px;
+            } 
+        </style>
+    {% else %}
+        <style>
+            p{
+                text-align: center;
+                margin: 8px 16px;
+                background-color: red;
+                color: white;
+                padding: 12px 24px;
+                border: 1px solid black;
+                border-radius: 4px;
+            }
+        </style>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <h1>{{text}}</h1>
+    {% if completed %}
+        <p class="todo todo--completed">You have completed this todo!</p>
+    {% else %}
+        <p class="todo todo--pending">You have not completed this todo, yet! Why not start it now?</p>
+    {% endif %}
+{% endblock %}
