@@ -1,7 +1,6 @@
 from flask import Blueprint, current_app, render_template, request, redirect, url_for
 import sys, os, datetime
 import uuid
-from dotenv import load_dotenv
 sys.path.append("/Habit_tracker")
 
 

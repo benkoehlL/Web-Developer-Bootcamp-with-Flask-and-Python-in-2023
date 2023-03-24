@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if email %}
+        <h1> Hello, {{username}}!</h1>
+        <p>Your E-Mail is {{email}}</p>
+    {% else %}
+        <h1> Hello, <a href="{{ url_for('login')}}">Log in</a>?</h1>
+    {% endif %}
+{% endblock %}

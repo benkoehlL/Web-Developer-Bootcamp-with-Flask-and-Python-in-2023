@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/sign_up_style.css')}}"/>
+</head>
+<body>
+    <form class="form" method="post">
+        <img class="picture" src="{{url_for('static', filename='pictures/SaxonQ_logo.png')}}" alt="The SaxonQ logo">
+        <p class="form__group">
+            <input class="input" type="text" name="name" id="name"/>
+            <label class="form__label" for="name">user name:</label>
+        </p>
+        <p  class="form__group">
+            <input class="input" type="text" name="email" id="email"/>
+            <label class="form__label" for="email">e-mail:</label>
+        </p>
+        <p  class="form__group">
+            <input class="input" type="password" name="password" id="password"/>
+            <label class="form__label" for="password">password:</label>
+        </p>
+
+        <button class="button" type="submit">Sign up</button>
+        <p class="footer">
+            <a class="footer__item" href="{{url_for('about')}}">Made by Benjamin Köhler</a>
+        </p>
+    </form>
+</body>
+</html>

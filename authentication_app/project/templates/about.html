@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+    <title>{{ title }}</title>
+</head>
+<body>
+    </head>
+    <main class="main main--about">
+        <section>
+            <h1 class="title" id="About_section_title"> About me </h1>
+            <p class="text , black",> Hello my name is <em>Benjamin Köhler</em>. I am a theoretical physicist 
+                from Germany. I am learning about web development to make all 
+                the cool results from my favourite field available to the public. 
+                Currently, I am working as a <em>Quantum Software Engineer</em> at SaxonQ
+                in my hometown Leipzig. 
+            </p> 
+            <p class="black">
+                I am starting with <em>HTML5</em> and <em>CSS3</em>. HTML allows me to create the general 
+                layout of my website and CSS to edit the style. As such, it allows me to
+                create all sorts of websites and, therefore, I consider those two languages
+                the most important to learn.
+            </p>
+            <p class="black">
+                These are the fields in physics I worked on most:
+            </p>
+            <ul class="about__physics">
+                <li class="bullet">non-linear dynamics and complex systems</li>
+                <li class="bullet">optimal control of quantum systems</li>
+                <li class="bullet">condensed matter theory (<a href="{{ url_for('static', filename='documents/dissertation_Koehler_Benjamin.pdf') }}">this</a> is my PhD thesis)</li>
+                <li class="bullet">statistical physics</li>
+                <li class="bullet"><a href="{{ url_for('static', filename='documents/Quantum Computing from basics to the cutting edge.pdf') }}"> quantum computing</a>  (check out <a href="{{ url_for('static', filename='documents/quantum_computing.pdf') }}">this</a> overview about the field I wrote)</li>
+            </ul>
+            <p class="black">
+                Additionally, I have expertise in the following fields:
+            </p>
+            <ul class="about__work">
+                <li class="bullet"><a href="{{ url_for('static', filename='documents/machine_learning_basics.pdf') }}">Machine learning</a></li>
+                <li class="bullet"><a href="{{ url_for('static', filename='documents/shepard_review.pdf') }}"> A fast interpolation algorithm for presssure data</a></li>
+                <li class="bullet"><a href="{{ url_for('static', filename='documents/Python GUI Development with PyQt6 & Qt Designer.pdf') }}"> GUI development with PyQt</a></li>
+                <li class="bullet">Web development with Flask</li>
+            </ul>    
+        </section>
+    </main>
+</body>
