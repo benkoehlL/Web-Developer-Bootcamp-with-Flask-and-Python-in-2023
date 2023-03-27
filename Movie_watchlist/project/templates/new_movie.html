@@ -1,0 +1,23 @@
+{% from "macros/fields.html" import render_text_field %}
+
+{% extends "layout.html" %}
+
+{% block head_content %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}"/>
+    
+{% endblock %}
+
+{% block main_content %}
+    <form name="add_movie" method="post" novalidate class="form">
+        <div class="form__content">
+            {{ form.hidden_tag() }}
+            {{ render_text_field(form.title) }}
+            {{ render_text_field(form.director) }}
+            {{ render_text_field(form.year) }}
+        </div>
+
+        <div>
+            {{ form.submit(class_="button button--form") }}
+        </div>
+    </form>
+{% endblock %}
