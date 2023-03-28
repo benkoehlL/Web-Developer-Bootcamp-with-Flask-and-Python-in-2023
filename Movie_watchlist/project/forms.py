@@ -46,13 +46,18 @@ class ExtendedMovieForm(MovieForm):
 
 class RegisterForm(FlaskForm):
     email = StringField("Email", validators=[InputRequired(), Email()])
-    password = PasswordField("Password", 
+    password = PasswordField("password", 
                              validators=[
                                 InputRequired(),
                                 Length(min=4, message="Your password must be at least 4 characters long.")])
     confirm_password = PasswordField("Confirm Password",
                                      validators=[
                                         InputRequired(),
-                                        EqualTo("Password", message="This password did not match the one in the password field.")
+                                        EqualTo("password", message="This password did not match the one in the password field.")
                                      ])
     submit = SubmitField("Register")
+
+class LoginForm(FlaskForm):
+    email = StringField("Email", validators=[InputRequired(), Email()])
+    password = PasswordField("password", validators=[InputRequired()])
+    submit = SubmitField("Login")
